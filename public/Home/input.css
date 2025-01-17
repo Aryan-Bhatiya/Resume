@@ -1,0 +1,139 @@
+/* .main-window *{
+    border: 2px solid black;
+    box-sizing: border-box;
+} */
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --nav-height: 18%;
+    --content-height: 82%;
+    --text-color: #1E1E2C;
+    --pop-color: #8976FD;
+    --primary-bg-color: #E8F1FA;
+    --default-font-family: "Sour gummy", serif;
+    --fancy-name-font: "Whisper", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
+    user-select: none;
+}
+
+.main-window::before{
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background-image: url("../Images/background.png");
+    background-size: clamp(250px,35%,500px);
+    opacity: 0.06;
+    position: absolute;
+    z-index: -1;
+}
+
+.main-window{
+    @apply w-[100vw] h-[100vh];
+}
+
+.nav-bar{
+    @apply w-full h-[var(--nav-height)] flex items-center justify-between;
+}
+
+.logo{
+    @apply w-[30%] h-[80%] flex items-center justify-center text-4xl;
+}
+
+.buttons{
+    @apply w-[50%] h-[70%] flex items-center justify-evenly;
+}
+
+.buttons > *{
+    @apply w-[20%] h-[70%] flex items-center justify-center rounded-l-full rounded-r-full text-xl cursor-pointer;
+}
+
+.home{
+    @apply text-[var(--pop-color)];
+}
+
+.buttons > *:hover{
+    @apply text-[var(--pop-color)];
+}
+
+.content{
+    @apply w-full h-[var(--content-height)] flex items-center justify-center;
+}
+
+.full-stack{
+    @apply w-[75%] h-[75%];
+}
+
+.text{
+    @apply w-full h-[25%] flex items-start justify-center text-3xl;
+}
+
+.t-box{
+    @apply w-[25%] h-[60%] rounded-l-full rounded-r-full border-2 border-[var(--text-color)] flex items-center justify-center;
+}
+
+.skills{
+    @apply w-full h-[75%] flex items-center justify-center;
+}
+
+.skills > *{
+    @apply w-[25%] h-full flex items-center justify-center flex-col;
+}
+
+.skill-logo{
+    @apply w-[50%] h-[35%] rounded-l-full rounded-r-full flex items-center justify-end flex-col text-xl border-solid border-black;
+}
+
+.skill-logo img{
+    @apply h-[60%];
+}
+
+.skill-images{
+    @apply w-full h-[65%] flex flex-wrap items-center justify-center gap-x-[25px] border-r-2 border-[var(--text-color)];
+}
+
+.dev-ops > .skill-images{
+    @apply border-none;
+}
+
+.skill-images img{
+    @apply w-[40px] h-[40px] cursor-pointer;
+}
+
+.frontend > .skill-images > img:nth-child(4){
+    @apply h-[25px];
+}
+
+.frontend > .skill-images > img:nth-child(3){
+    @apply h-[38px];
+}
+
+.frontend>.skill-images{
+    @apply justify-center gap-x-[30px];
+}
+
+.backend > .skill-images > img:nth-child(1){
+    @apply w-[120px];
+}
+
+.backend > .skill-images > img:nth-child(2){
+    @apply w-[60px];
+}
+
+.database > .skill-images > img:nth-child(1){
+    @apply w-[150px] h-[70px];
+}
+
+.dev-ops > .skill-images > img:nth-child(1){
+    @apply w-[50px] h-[48px];
+}
