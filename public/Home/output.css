@@ -620,7 +620,6 @@ video {
 }
 
 .buttons > * {
-  background-color: var(--pop-color);
   display: flex;
   height: 70%;
   width: 20%;
@@ -631,17 +630,21 @@ video {
   border-bottom-left-radius: 9999px;
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
+  background-color: var(--pop-color);
   font-size: 1.25rem;
   line-height: 1.75rem;
-  color: white;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .home {
-  color: black;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .buttons > *:hover {
-  color: black;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .content {
