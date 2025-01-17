@@ -55,15 +55,15 @@
 }
 
 .buttons > *{
-    @apply w-[20%] h-[70%] flex items-center justify-center rounded-l-full rounded-r-full text-xl cursor-pointer;
+    @apply w-[20%] h-[70%] flex items-center justify-center rounded-l-full rounded-r-full text-xl cursor-pointer bg-[var(--pop-color)];
 }
 
 .home{
-    @apply text-[var(--pop-color)];
+    @apply text-black;
 }
 
 .buttons > *:hover{
-    @apply text-[var(--pop-color)];
+    @apply text-black;
 }
 
 .content{
