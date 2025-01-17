@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --nav-height: 18%;
+    --content-height: 82%;
+    --text-color: #1E1E2C;
+    --pop-color: #8976FD;
+    --primary-bg-color: #E8F1FA;
+    --default-font-family: "Sour gummy", serif;
+    --fancy-name-font: "Whisper", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
+    user-select: none;
+}
+
+.main-window::before{
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background-image: url("../Images/background.png");
+    background-size: clamp(250px,35%,500px);
+    opacity: 0.06;
+    position: absolute;
+    z-index: -1;
+}
+
+.main-window{
+    @apply w-[100vw] h-[100vh];
+}
+
+
+.nav-bar{
+    @apply w-full h-[var(--nav-height)] flex items-center justify-between;
+}
+
+.logo{
+    @apply w-[30%] h-[80%] flex items-center justify-center text-4xl;
+}
+
+.buttons{
+    @apply w-[50%] h-[70%] flex items-center justify-evenly;
+}
+
+.buttons > *{
+    @apply w-[20%] h-[70%] flex items-center justify-center rounded-l-full rounded-r-full text-xl cursor-pointer;
+}
+
+.contact{
+    @apply text-[var(--pop-color)];
+}
+
+.buttons > *:hover{
+    @apply text-[var(--pop-color)];
+}
+
+
+.logos{
+    @apply w-full h-[var(--content-height)] flex justify-evenly items-center;
+}
+
+.gmail img{
+    @apply w-[75px] h-[75px];
+}
+
+.gmail{
+    @apply h-[50%] flex flex-col items-center justify-evenly text-2xl;
+}
+
+.linkdin{
+    @apply h-[50%] flex flex-col items-center justify-center text-xl;
+}
+
+.linkdin img{
+    @apply w-[200px] h-[125px] cursor-pointer;
+}
