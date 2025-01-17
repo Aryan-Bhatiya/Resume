@@ -620,6 +620,7 @@ video {
 }
 
 .buttons > * {
+  background-color: var(--pop-color);
   display: flex;
   height: 70%;
   width: 20%;
@@ -632,14 +633,15 @@ video {
   border-bottom-right-radius: 9999px;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  color: white;
 }
 
 .home {
-  color: var(--pop-color);
+  color: black;
 }
 
 .buttons > *:hover {
-  color: var(--pop-color);
+  color: black;
 }
 
 .content {
